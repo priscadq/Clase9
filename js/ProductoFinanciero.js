@@ -403,6 +403,45 @@ var datosClientes  = [
 
 
 
+function BuscarCiudades() {
+    var regionSeleccionada = $("#regiones option:select").val();
+    $.ajax({
+        data:"json",
+        url: "https://restcountries.eu/rest/v2/region/" + regionSeleccionada,
+        type: "GET",
+        success: function(result) {
+            result.forEach (function(item) {
+                paises += "<option value=\""  +item.name +"\">" +item.name+ "</option>";
+
+            });
+            $("#paises").html(paises);
+
+            }
+
+        };
+        error: function() {
+
+        }
+    })
+}
+
+
+
+/*
+json.parse
+json.parse.forEach{
+    var
+    function (){
+
+    }
+}
+     vectorTodosMisClientes.forEach(
+            function(item, index) {
+                var titulo = "<h3>" + item.Nombre + " " + item.Apellido + "</h3>";
+                "<div>"
+                var cuerpo = "<div><table>" + "<input type=\"button\" id=\"nuevoProducto\" name=\"NuevoProducto\" onclick=\"miDialogoProducto.data('idcliente')," + index + ").dialog('open')\" value=\" Nuevo Producto\" class=\"ui-button ui-widget ui-corner-all\" /></div>" + getProductosAnonima(item.productos) + "</table></div>";
+                itemsAccordion += titulo + cuerpo; 
+
 $.ajax({
     type: 'GET',
     url: filename,
@@ -418,3 +457,4 @@ $.ajax({
       //Do stuff with the JSON data
     }
   });
+*/
