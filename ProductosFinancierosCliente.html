@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui.css">
+    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script src="js/ProductoFinanciero.js" type="text/javascript"></script>
+</head>
+<body>
+
+<center>
+        <input type="button" id="nuevoCliente" name="nuevoCliente" value="+ Nuevo Cliente" class="ui-button ui-widget ui-corner-all" />
+</center>
+
+
+<input type="text" id="atributo" />
+<input type="text" id="valorAtributo" />
+<input type="button" id="btnBuscar" onclick="buscarCantidadCliente()"" value="Buscar"/>
+
+<div id="dialogoNuevoCliente" title="Crear Nuevo Cliente">
+    <p class="validateTips">Todos los campos son requeridos</p>
+    <form>
+        <fieldset>
+            <label for="name">Nombre</label>
+            <input type="text" name="nombre" id="nombre" value="" class="text ui-widget-content ui-corner-all"><br>
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" value="" class="text ui-widget-content ui-corner-all"><br>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all"><br>
+            <label for="telefono">Telefono </label>
+            <input type="text" name="telefono" id="telefono" value="" class="text ui-widget-content ui-corner-all"><br>
+
+            <label for="region">Regiones</label>
+            <select name="regiones" id="regiones">c" class="text ui-widget-content ui-corner-all">
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                <option value="Europa">Europa</option>
+                <option value="Oceania">Oceania</option>
+            </select><br> 
+             <label for="nroDoc">Nro Doc</label>
+            <input type="text" name="nroDoc" id="nroDoc" value="" class="text ui-widget-content ui-corner-all"><br>
+            <label for="edad">Edad</label>
+            <input type="text" name="edad" id="edad" value="" class="text ui-widget-content ui-corner-all"><br>
+            <label for="fechaNacimiento">Nacimiento</label>
+            <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="" class="text ui-widget-content ui-corner-all"><br>
+            
+        </fieldset>
+    </form>
+</div>
+
+<div id="dialogoNuevoProducto" title="Agregar Productos">
+        <p class="validateTips">Todos los campos son requeridos</p>
+        <form>
+            <fieldset>
+                <label for="pnombre">Nombre</label>
+                <input type="text" name="pnombre" id="pnombre" value="" class="text ui-widget-content ui-corner-all"><br>
+                <label for="ptipo">Tipo</label>
+                <select name="ptipo" id="ptipo" class="text ui-widget-content ui-corner-all">
+                        <option value="1">CH</option>
+                        <option value="2">PE</option>
+                        <option value="3">TC</option>
+                        
+                </select><br> 
+                
+                <label for="psaldo">Saldo</label>
+                <input type="text" name="psaldo" id="psaldo" value="" class="text ui-widget-content ui-corner-all"><br>
+                <label for="ptasa">Tasa Mensual</label>
+                <input type="text" name="ptasa" id="ptasa" value="" class="text ui-widget-content ui-corner-all"><br>
+                <label for="pvencimiento">Fecha Vencimiento</label>
+                <input type="date" name="pvencimiento" id="pvencimiento" value="" class="text ui-widget-content ui-corner-all"><br>
+    
+                
+            </fieldset>
+        </form>
+    </div>
+
+
+
+
+<div id="AccordionClientes"></div>
+
+
+    <!-- <fieldset>
+        <legend>Cliente:</legend>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td>
+                        <div id="lblNombre"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apellido</td>
+                    <td><div id="lblApellido"></div></td>
+                </tr>
+                <tr>
+                    <td>Tipo Documento</td>
+                    <td><div id="lblTipDoc"></div></td>
+                </tr>
+                <tr>
+                    <td>Numero Documento</td>
+                    <td><div id="lblNroDocumento"></div></td>
+                </tr>
+                <tr>
+                    <td>Telefono</td>
+                    <td><div id="lblTelefono"></div></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><div id="lblEmail"></div></td>
+                </tr>
+                <tr>
+                    <td>Edad</td>
+                    <td><div id="lblEdad"></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Productos:
+                        <table id="tblProductos"></table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset> -->
+<!--     <input ype="button" value="Mostar Productos" onclick="showProductos()" />
+    <input type="button" value="Cliente Por Cadena" onclick="crearCliente()" />
+
+    <input type="button" value="2 Instanci de Singlenton??" onclick="crear2InstanciaSinglentonCliente()" /> -->
+    <table></table>
+
+    
+
+</body>
+</html>
