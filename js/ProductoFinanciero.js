@@ -403,28 +403,28 @@ var datosClientes  = [
 
 
 
-function BuscarCiudades() {
-    var regionSeleccionada = $("#regiones option:select").val();
+function buscarCiudades() {
+    debugger;
+    var regioSeleccionada = $("#regiones option:selected").val();
     $.ajax({
-        data:"json",
-        url: "https://restcountries.eu/rest/v2/region/" + regionSeleccionada,
+        dataType: "json",
+        url: "https://restcountries.eu/rest/v2/region/" + regioSeleccionada,
         type: "GET",
-        success: function(result) {
-            result.forEach (function(item) {
-                paises += "<option value=\""  +item.name +"\">" +item.name+ "</option>";
-
-            });
-            $("#paises").html(paises);
-
-            }
-
-        };
-        error: function() {
-
+        success: function (result) {
+                debugger
+            //escribir logica para constuir
+                var paises = "";
+                result.forEach(function (item) {
+                    paises += "<option value=\"" + item.name + "\">"+item.name+"</option>";
+                });
+                $("#paises").html(paises);
+        },
+        error: function(e){
+            alert("error" + e);
         }
-    })
-}
-
+    });
+ 
+ }
 
 
 /*
