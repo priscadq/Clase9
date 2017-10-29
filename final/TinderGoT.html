@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Trabajo Final</title>
+    <!-- Bootstrap Core CSS -->
+    
+
+    <link rel="stylesheet" href="modo.css">
+    <script type="text/javascript" src="scripts.js">
+
+    </script>
+
+    <!-- jquery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+
+<body onload="sexo()">
+
+  <!-- Cards panel -->
+
+<div class="container" id="cards-panel">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="caja">
+        <div id="botones">
+          <div style='float: left;'>
+            <button class="fa" onclick="siguiente()">&#8592;</button>
+          </div>
+          <div style='float: right;'>
+            <button class="fa" onclick="anterior()">&#8594;</button>
+          </div>
+        </div>
+        <div id="sexo"></div>
+        <div class="card-block">
+          <div class="card-title">
+            <h5>Name: <span class="name"></span></h5>
+            <h5>Title: <span id="titles"></span></h5>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Datos</h4>
+        </div>
+        <div class="modal-body">
+          <p>Nombre: <span class="name"></span></p>
+          <p>Nacimiento: <span id="born"></span></p>
+          <p>Sexo: <span id="sexomodal"></span></p>
+         
+
+
+          <p>Libros: <span id="books"></span></p>
+          <p>ISBN <span id="isbn"></span></p>
+          <p>Nro de Paginas <span id="nropag"></span></p>
+          <p>Tipo de Tapa: <span id="tipotap"></span></p>
+          <p>Fecha Publicacion <span id="publicacion"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    </div>
+  </div>

@@ -46,7 +46,8 @@
 
 
             <label for="region">Regiones</label>
-            <select name="regiones" id="regiones" class="text ui-widget-content ui-corner-all">
+            <select onchange="buscarPaises()" name="regiones" id="regiones" class="text ui-widget-content ui-corner-all">
+                <option value="Seleccione">Seleccione</option>
                 <option value="Americas">Americas</option>
                 <option value="Asia">Asia</option>
                 <option value="Africa">Africa</option>
@@ -55,13 +56,10 @@
             </select><br> 
 
             <label for="paises">Paises</label>
-            <select name="paises" id="paises" class="text ui-widget-content ui-corner-all">
-                <option value="Americas">Americas</option>
-                <option value="Asia">Asia</option>
-                <option value="Africa">Africa</option>
-                <option value="Europa">Europa</option>
-                <option value="Oceania">Oceania</option>
-            </select><br> 
+            <select onchange="buscarIdioma()"" name="paises" id="paises" class="text ui-widget-content ui-corner-all"></select><br> 
+            
+            <label for="idiomas">Idiomas</label>
+            <select name="idiomas" id="idiomas" class="text ui-widget-content ui-corner-all"></select><br> 
             
             <label for="edad">Edad</label>
             <input type="text" name="edad" id="edad" value="" class="text ui-widget-content ui-corner-all"><br>

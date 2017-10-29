@@ -403,22 +403,49 @@ var datosClientes  = [
 
 
 
-function buscarCiudades() {
-    debugger;
+function buscarPaises() {
+    
     var regioSeleccionada = $("#regiones option:selected").val();
     $.ajax({
         dataType: "json",
         url: "https://restcountries.eu/rest/v2/region/" + regioSeleccionada,
         type: "GET",
         success: function (result) {
-                debugger
+                
             //escribir logica para constuir
                 var paises = "";
+                var idiomas = "";
                 result.forEach(function (item) {
                     paises += "<option value=\"" + item.name + "\">"+item.name+"</option>";
                 });
                 $("#paises").html(paises);
-        },
+
+                        },
+        error: function(e){
+            alert("error" + e);
+        }
+    });
+ 
+ }
+
+ function buscarIdioma() {
+    
+    var paisesSeleccionado = $("#paises option:selected").val();
+    $.ajax({
+        dataType: "json",
+        url: "https://restcountries.eu/rest/v2/name/" + paisesSeleccionado,
+        type: "GET",
+        success: function (result) {
+               
+            //escribir logica para constuir
+                var idiomas = "";
+                result[0].languages.forEach(function (item) {
+                    
+                    idiomas += "<option value=\"" + item.name + "\">"+item.name+"</option>";
+                });
+                $("#idiomas").html(idiomas);
+
+                        },
         error: function(e){
             alert("error" + e);
         }
